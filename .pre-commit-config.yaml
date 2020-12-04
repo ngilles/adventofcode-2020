@@ -9,13 +9,21 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
 
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.7.4
+    hooks:
+      - id: pyupgrade
+        name: Upgrande Python Syntax (pyupgrade)
+
   - repo: https://github.com/pycqa/isort
     rev: 5.6.4
     hooks:
       - id: isort
+        name: Sort Python imports (isort)
 
   - repo: https://github.com/psf/black
     rev: 20.8b1
     hooks:
       - id: black
+        name: Format Python Files (black)
         language_version: python3
